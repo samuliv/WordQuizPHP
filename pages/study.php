@@ -8,7 +8,7 @@
       $Q = tpg('q');
       $R = tpg('r');
       $W = tpg('w');
-      $ANSWER = tpg('ans');
+      $ANSWER = superTrim(tpg('ans'));
       $WAS_CORRECT = 0;
       $QUESTIONS = explode('|',$Q);
       $STEPS = count($QUESTIONS);

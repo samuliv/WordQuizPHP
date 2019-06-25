@@ -75,7 +75,7 @@
             $x--;
           }
           $temp = str_replace(array('[', ']', '?', '!', ','), '', $temp);
-          $temp = str_replace(array('     ', '    ', '   ', '  '), ' ', $temp);
+          $temp = spaceTrim($temp);
           if ($z==$pow-1){ $all = $temp; } else { $arr[] = $temp; }
           $z--;
         }
@@ -97,7 +97,15 @@
   }
 
   function lower($t){
-    return strtolower($t);
+    return mb_strtolower($t);
+  }
+
+  function spaceTrim($i) {
+    return str_replace(array('     ', '    ', '   ', '  '), ' ', $i);
+  }
+
+  function superTrim($i) {
+    return trim(lower($i));
   }
 
   function nz($i) { 
