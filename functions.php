@@ -105,7 +105,7 @@
   }
 
   function superTrim($i) {
-    return trim(lower($i));
+    return trim(spaceTrim(lower($i)));
   }
 
   function nz($i) { 
