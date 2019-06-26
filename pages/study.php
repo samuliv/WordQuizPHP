@@ -77,7 +77,7 @@
           <td>Answer:</td><td>
           <input class="ansBox" id="ans" name="ans" type="text">
           <br>
-          '.createButtons("åäöąćęłńśźż").'
+          '.createButtons("åäöąćęłńóśźż").'
           </td></tr>
           </table><br><input type="submit" value="Check! [ENTER]"> <input type="button" value="Exit" onClick="javascript:window.location.href=\'?p=\';">
           </form>
