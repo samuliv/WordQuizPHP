@@ -18,7 +18,7 @@
         $WORD_ROW = explode(';',rl('questions', $QUESTIONS[$STEP-1]));
         if ( $L == 'PO' ) {$WORD_WAS = $WORD_ROW[1]; $CORRECT_WAS = $WORD_ROW[0]; }else{ $WORD_WAS = $WORD_ROW[0]; $CORRECT_WAS = $WORD_ROW[1]; };
         
-        $CORR = lower($CORRECT_WAS);
+        $CORR = superTrim($CORRECT_WAS);
         $CORRECTS = explode(',',$CORR);
 
         explodeToPieces($CORRECTS);

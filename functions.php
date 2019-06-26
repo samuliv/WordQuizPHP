@@ -74,8 +74,7 @@
             if(substr($binary,7-$x,1) == "0" ) $temp = rsubstring($temp, $matches[0][$x][1], strlen($matches[0][$x][0]));
             $x--;
           }
-          $temp = str_replace(array('[', ']', '?', '!', ','), '', $temp);
-          $temp = spaceTrim($temp);
+          $temp = removeExtra(spaceTrim($temp));
           if ($z==$pow-1){ $all = $temp; } else { $arr[] = $temp; }
           $z--;
         }
@@ -95,8 +94,12 @@
       }
     }
   }
+  
+  function removeExtra($i) {
+    return str_replace(array('[', ']', '?', '!', ','), '', $i);
+  }
 
-  function lower($t){
+  function lower($t) {
     return mb_strtolower($t);
   }
 
@@ -105,7 +108,7 @@
   }
 
   function superTrim($i) {
-    return trim(spaceTrim(lower($i)));
+    return trim(spaceTrim(lower(removeExtra($i))));
   }
 
   function nz($i) { 
